@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import RaisedButton from 'material-ui/lib/raised-button';
 
 class Counter extends Component {
   render() {
@@ -10,13 +9,17 @@ class Counter extends Component {
       <div>
         Clicked: {counter} times
         {' '}
-        <RaisedButton label="+" onClick={increment}/>
+        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={increment}><i className="material-icons">add</i>
+        </button>
         {' '}
-        <RaisedButton label="-" onClick={decrement}/>
+        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={decrement}>-
+        </button>
         {' '}
-        <RaisedButton label="Increment if odd" onClick={incrementIfOdd}/>
+        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={incrementIfOdd}>Increment if odd
+        </button>
         {' '}
-        <RaisedButton label="Increment async" onClick={() => incrementAsync()} />
+        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={() => incrementAsync()}>Increment async
+        </button>
       </div>
     );
   }
