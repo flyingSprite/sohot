@@ -1,4 +1,7 @@
+import './info.css';
 import React, { Component, PropTypes } from 'react';
+import Checkbox from 'material-ui/lib/checkbox';
+import FullCalendar from './full-calendar/full-calendar.js';
 
 class Counter extends Component {
   render() {
@@ -7,6 +10,9 @@ class Counter extends Component {
     //渲染组件，包括一个数字，四个按钮
     return (
       <div>
+        <div className="worklog-layout--checkbox">
+           <Checkbox style={{ marginBottom: 16 }} />
+          </div>
         Clicked: {counter} times
         {' '}
         <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={increment}><i className="material-icons">add</i>
@@ -20,6 +26,7 @@ class Counter extends Component {
         {' '}
         <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={() => incrementAsync()}>Increment async
         </button>
+        <FullCalendar />
       </div>
     );
   }
