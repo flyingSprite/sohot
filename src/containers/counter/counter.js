@@ -1,12 +1,18 @@
-import './info.css';
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import Checkbox from 'material-ui/lib/checkbox';
-import FullCalendar from './full-calendar/full-calendar.js';
+import FullCalendar from '../../components/full-calendar/full-calendar.js';
+
+import * as CounterAction from '../../actions/counter-actions.js';
 
 class Counter extends Component {
   render() {
     //从组件的props属性中导入四个方法和一个变量
-    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
+    const { increment, incrementIfOdd, incrementAsync, decrement } = this.props.appActions;
+
+    const { counter } = this.props.appState;
     //渲染组件，包括一个数字，四个按钮
     return (
       <div>
@@ -31,15 +37,25 @@ class Counter extends Component {
     );
   }
 }
-//限制组件的props安全
+
 Counter.propTypes = {
-  //increment必须为fucntion,且必须存在
-  increment: PropTypes.func.isRequired,
-  incrementIfOdd: PropTypes.func.isRequired,
-  incrementAsync: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
-  //counter必须为数字，且必须存在
-  counter: PropTypes.number.isRequired
+  appState  : PropTypes.object.isRequired,
+  appActions: PropTypes.object.isRequired
 };
 
-export default Counter;
+function mapStateToProps(state) {
+  return {
+    appState: state.counter.toJS()
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    appActions : bindActionCreators(CounterAction, dispatch)
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter);
