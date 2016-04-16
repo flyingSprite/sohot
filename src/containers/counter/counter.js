@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Checkbox from 'material-ui/lib/checkbox';
-import FullCalendar from '../../components/full-calendar/full-calendar.js';
 
 import * as CounterAction from '../../actions/counter-actions.js';
 
@@ -32,7 +31,6 @@ class Counter extends Component {
         {' '}
         <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={() => incrementAsync()}>Increment async
         </button>
-        <FullCalendar />
       </div>
     );
   }

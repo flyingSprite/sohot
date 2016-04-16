@@ -16,6 +16,7 @@ class Main extends Component {
           <span className="mdl-layout-title">Sohot</span>
           <nav className="mdl-navigation">
             <Link className="mdl-navigation__link" to="/main/counter">Counter</Link>
+            <Link className="mdl-navigation__link" to="/main/calendar">Calendar</Link>
             <a className="mdl-navigation__link" href="">Link</a>
             <a className="mdl-navigation__link" href="">Link</a>
             <a className="mdl-navigation__link" href="">Link</a>
