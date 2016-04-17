@@ -2,6 +2,7 @@
 import 'Roboto-fontface';
 import 'material-design-lite/dist/material.min.css';
 import 'material-design-lite/dist/material.min.js';
+import 'material-design-icons';
 
 
 // Libraries

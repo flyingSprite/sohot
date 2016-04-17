@@ -13,7 +13,7 @@ class Calendar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="mdl-grid">
         <FullCalendar />
       </div>
     );

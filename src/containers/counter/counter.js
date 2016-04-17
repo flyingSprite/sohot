@@ -14,10 +14,10 @@ class Counter extends Component {
     const { counter } = this.props.appState;
     //渲染组件，包括一个数字，四个按钮
     return (
-      <div>
+      <div className="mdl-grid">
         <div className="worklog-layout--checkbox">
            <Checkbox style={{ marginBottom: 16 }} />
-          </div>
+        </div>
         Clicked: {counter} times
         {' '}
         <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={increment}><i className="material-icons">add</i>
