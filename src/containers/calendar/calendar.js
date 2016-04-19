@@ -12,9 +12,16 @@ import FullCalendar from '../../components/full-calendar/full-calendar.js';
 class Calendar extends Component {
 
   render() {
+    let events = [
+      {
+        title: 'My Works!',
+        date: '2016-04-10',
+        allDay: true
+      }
+    ];
     return (
       <div className="mdl-grid">
-        <FullCalendar />
+        <FullCalendar events={events} />
       </div>
     );
   };
