@@ -4,9 +4,20 @@ import { bindActionCreators } from 'redux';
 
 import Checkbox from 'material-ui/lib/checkbox';
 
+import TagColor from '../../components/tag-color/tag-color.js';
+
 import * as CounterAction from '../../actions/counter-actions.js';
 
 class Counter extends Component {
+  constructor() {
+    super();
+    this._click = ::this._click;
+  }
+
+  _click(){
+    const {tagColor} = this.refs;
+    console.log(tagColor.getColor() );
+  }
   render() {
     //从组件的props属性中导入四个方法和一个变量
     const { increment, incrementIfOdd, incrementAsync, decrement } = this.props.appActions;
@@ -15,6 +26,8 @@ class Counter extends Component {
     //渲染组件，包括一个数字，四个按钮
     return (
       <div className="mdl-grid">
+        <button onClick={this._click} >message</button>
+        <TagColor ref="tagColor" />
         <div className="worklog-layout--checkbox">
            <Checkbox style={{ marginBottom: 16 }} />
         </div>

@@ -4,6 +4,8 @@ import 'material-design-lite/dist/material.min.css';
 import 'material-design-lite/dist/material.min.js';
 import 'material-design-icons';
 
+import './src/asserts/index.css';
+
 
 // Libraries
 import React from 'react';
