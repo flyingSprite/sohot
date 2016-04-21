@@ -21,12 +21,33 @@ class FullCalendar extends Component {
             }
         }
       },
+      selectable: true,
+      selectHelper: true,
+      select: function(start, end) {
+        var title = prompt('Event Title:');
+        var eventData;
+        if (title) {
+            eventData = {
+                title: title,
+                start: start,
+                end: end
+            };
+            $calendar.fullCalendar('renderEvent', eventData, true); // stick? = true
+        }
+       $calendar.fullCalendar('unselect');
+      },
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
       events: [
         {
             title: 'This is my works.',
             start: new Date(),
             description: 'cccccccc'
-        }
+        },{
+                    title: 'Meeting',
+                    start: '2016-04-12T10:30:00',
+                    end: '2016-04-13T12:30:00'
+                }
       ],
       eventRender: function(event, element) {
         console.log('=======');
@@ -37,7 +58,7 @@ class FullCalendar extends Component {
         console.log(moment.format('YYYY-MM-DD, h:mm:ss a'));
 
         // Next month
-        $calendar.fullCalendar('next');
+        // $calendar.fullCalendar('next');
       }
     });
 

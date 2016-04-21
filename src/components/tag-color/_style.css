@@ -1,0 +1,21 @@
+.event-tag {
+    margin-top: 20px;
+}
+
+.event-tag span {
+    padding: 11px 14px 0;
+    margin-right: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.icon-layout {
+  position: absolute;
+  margin: -10px 0 0 -10px;
+  color: #fff;
+
+}
+
+.icon-layout__display {
+	display: none;
+}

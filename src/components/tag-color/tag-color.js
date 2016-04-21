@@ -1,3 +1,5 @@
+import './_color.css';
+import './_style.css';
 
 import React, { Component } from 'react';
 
@@ -7,7 +9,6 @@ class TagColor extends Component {
 
   constructor() {
     super();
-    console.log('cccccccddddddd');
     this.getColor = ::this.getColor;
     this._onSelectTagColor = ::this._onSelectTagColor ;
     this.state = { color: '' };
@@ -37,13 +38,17 @@ class TagColor extends Component {
         'bgm-purple',
         'bgm-black'
     ];
+
+    let showClassName = 'material-icons icon-layout';
+    let hideClassName = 'material-icons icon-layout__display';
     return (
-      <div>
+      <div className="event-tag">
         {colors.map((color, index) => {
+          console.log(this.state.color === color);
           return (
-            <div key={index} onClick={this._onSelectTagColor} data-tag={color} className={color}>
-              <i className="material-icons" data-tag={color}>done</i>
-            </div>
+            <span key={index} onClick={this._onSelectTagColor} data-tag={color} className={color}>
+              <i className={this.state.color === color ? showClassName : hideClassName} data-tag={color}>done</i>
+            </span>
           );
         })}
       </div>
