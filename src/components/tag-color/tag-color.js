@@ -1,7 +1,7 @@
 import './_color.css';
 import './_style.css';
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import 'material-design-icons';
 
@@ -20,9 +20,10 @@ class TagColor extends Component {
 
   _onSelectTagColor(e) {
     let tag = e.target.getAttribute('data-tag');
-    console.log(e.target);
-    console.log(tag);
     this.setState({color: tag});
+
+    const { onSelect } = this.props;
+    onSelect(tag);
   }
 
   render() {
@@ -44,7 +45,6 @@ class TagColor extends Component {
     return (
       <div className="event-tag">
         {colors.map((color, index) => {
-          console.log(this.state.color === color);
           return (
             <span key={index} onClick={this._onSelectTagColor} data-tag={color} className={color}>
               <i className={this.state.color === color ? showClassName : hideClassName} data-tag={color}>done</i>
@@ -55,5 +55,9 @@ class TagColor extends Component {
     );
   }
 }
+
+TagColor.propTypes = {
+  onSelect: PropTypes.func.isRequired
+};
 
 export default TagColor;
