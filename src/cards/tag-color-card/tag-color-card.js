@@ -46,7 +46,9 @@ class TagColorCard extends Component {
             secondary={true}
             onClick={this._onSelectColorName}
           />
-          <span className={'sohot-card__span ' + this.state.colorClass}>{this.state.colorName}</span>
+          <span className={'sohot-card__span mdl-shadow--2dp ' + this.state.colorClass}>
+            {this.state.colorName}
+          </span>
         </div>
       </div>
     );
