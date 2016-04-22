@@ -36,8 +36,7 @@ class TagColor extends Component {
         'bgm-green',
         'bgm-cyan',
         'bgm-orange',
-        'bgm-purple',
-        'bgm-black'
+        'bgm-purple'
     ];
 
     let showClassName = 'material-icons icon-layout';

@@ -1,0 +1,16 @@
+
+
+.sohot-card {
+  width: 512px;
+  margin: 0 auto;
+}
+
+.sohot-card__span {
+  margin-top: 1px;
+  padding: 7px 10px 9px 10px;
+  width: 310px !important;
+  float: right;
+  text-align: center;
+}
+
+

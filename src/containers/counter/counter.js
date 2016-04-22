@@ -6,29 +6,13 @@ import { bindActionCreators } from 'redux';
 
 import Checkbox from 'material-ui/lib/checkbox';
 
-import TagColor from '../../components/tag-color/tag-color.js';
+import TagColorCard from '../../cards/tag-color-card/tag-color-card.js';
 
 import * as CounterAction from '../../actions/counter-actions.js';
 
 class Counter extends Component {
   constructor() {
     super();
-    this._click = ::this._click;
-    this._onSelectColor = ::this._onSelectColor;
-    this.state = {
-      color: ''
-    };
-  }
-
-  _click(){
-    const {tagColor} = this.refs;
-    this.setState({'color': tagColor.getColor});
-    console.log(tagColor.getColor() );
-  }
-
-  _onSelectColor(color) {
-    console.log(color);
-    this.setState({color: color});
   }
 
   render() {
@@ -40,18 +24,7 @@ class Counter extends Component {
     return (
       <div className="mdl-grid">
         <div className="mdl-cell mdl-cell--12-col">
-          <button onClick={this._click} >message</button>
-          <div className="sohot-card mdl-card mdl-shadow--2dp">
-            <div className="mdl-card__title">
-              <h2 className="mdl-card__title-text">Tag Color</h2>
-            </div>
-            <div className="mdl-card__supporting-text">
-              <TagColor ref="tagColor" onSelect={this._onSelectColor}/>
-            </div>
-            <div className="mdl-card__actions mdl-card--border">
-              <span className={this.state.color}>Show Color</span>
-            </div>
-          </div>
+          <TagColorCard />
         </div>
         <div className="mdl-cell mdl-cell--12-col">
           <Checkbox style={{ marginBottom: 16 }} />
