@@ -34,7 +34,6 @@ class Main extends Component {
         </div>
           <main className="mdl-layout__content">
             {this.props.children}
-          
           <footer className="mdl-mega-footer">
             <div className="mdl-mega-footer__middle-section">
               <div className="mdl-mega-footer__drop-down-section">

@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import Checkbox from 'material-ui/lib/checkbox';
 
 import TagColorCard from '../../cards/tag-color-card/tag-color-card.js';
+import Editor from '../../components/editor/editor.js';
 
 import * as CounterAction from '../../actions/counter-actions.js';
 
@@ -25,6 +26,9 @@ class Counter extends Component {
       <div className="mdl-grid">
         <div className="mdl-cell mdl-cell--12-col">
           <TagColorCard />
+        </div>
+        <div className="mdl-cell mdl-cell--12-col">
+          <Editor />
         </div>
         <div className="mdl-cell mdl-cell--12-col">
           <Checkbox style={{ marginBottom: 16 }} />
