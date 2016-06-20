@@ -29,6 +29,7 @@ var config = {
         publicPath: '/build/'
     },
     module: {
+        noParse: [/autoit\.js$/],
         preLoaders: [
             {
                 test: /\.js(x)?$/,
@@ -39,12 +40,16 @@ var config = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: nodeModulesPath,
                 query:
                 {
                     presets:['react']
                 }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             },
             {
                 test: /\.jsx$/,

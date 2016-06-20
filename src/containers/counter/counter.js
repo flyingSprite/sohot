@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Checkbox from 'material-ui/lib/checkbox';
+import { Checkbox } from 'material-ui';
 
 import TagColorCard from '../../cards/tag-color-card/tag-color-card.js';
 import Editor from '../../components/editor/editor.js';

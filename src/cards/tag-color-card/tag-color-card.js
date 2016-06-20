@@ -3,7 +3,7 @@ import './_style.css';
 
 import React, { Component } from 'react';
 import TagColor from '../../components/tag-color/tag-color.js';
-import RaisedButton from 'material-ui/lib/raised-button';
+import { RaisedButton } from 'material-ui';
 
 class TagColorCard extends Component {
 

@@ -14,3 +14,10 @@ Basic folder: [https://github.com/kriasoft/react-starter-kit/blob/master/tools/w
 
 * React Draggable: [https://github.com/mzabriskie/react-draggable](https://github.com/mzabriskie/react-draggable)
 * React Select: [https://github.com/react-component/select](https://github.com/react-component/select)
+
+
+## Issue statistics ##
+
+###  ###
+Reference to [here](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md#as-for-exceptions).
+
