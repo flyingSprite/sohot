@@ -29,77 +29,9 @@ class Main extends Component {
             <Link to="/main/calendar">Calendar</Link>
           </nav>
         </ReactHeadroom>
-
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-
-          <div>test </div>
-        <main>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
-          <div>test .............</div>
+        <div style={{ position: 'absolute', top: '40px' }}>
           {this.props.children}
-        </main>
+        </div>
         <DevTools />
       </div>
     );
