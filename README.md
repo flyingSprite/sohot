@@ -10,6 +10,8 @@ Babel 6.x + webpack support react: [click here](http://stackoverflow.com/questio
 Basic folder: [https://github.com/kriasoft/react-starter-kit/blob/master/tools/webpack.config.js](https://github.com/kriasoft/react-starter-kit/blob/master/tools/webpack.config.js)
 
 
+变成规范采用[Airbnb react开发规范](https://github.com/airbnb/javascript/tree/master/react)
+
 ## Public React Components
 
 * React Draggable: [https://github.com/mzabriskie/react-draggable](https://github.com/mzabriskie/react-draggable)
