@@ -7,13 +7,19 @@ import { bindActionCreators } from 'redux';
 import * as AppActions from '../../actions/app-actions.js';
 
 // Components
+import OptionProperty from './OptionProperty';
 // import Spinner from '../../components/spinner/spinner.js';
 
-class Login extends Component {
-  
+class FieldDesignShow extends Component {
+
+  static propTypes = {
+    appState  : PropTypes.object.isRequired,
+    appActions: PropTypes.object.isRequired
+  };
+
   componentWillReceiveProps() {
   }
-componentDidUpdate() {
+  componentDidUpdate() {
     /* eslint-disable */
     /* component handler is used by Material Design Lite, every react component
        needs to upgrade its DOM in order to maintain the effect.
@@ -26,16 +32,11 @@ componentDidUpdate() {
     console.log(this.props.children);
     return (
       <div>
-        This is login page!
+        <OptionProperty options={[]} />
       </div>
     );
   };
 }
-
-Login.propTypes = {
-  appState  : PropTypes.object.isRequired,
-  appActions: PropTypes.object.isRequired
-};
 
 function mapStateToProps(state) {
   return {
@@ -52,4 +53,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(FieldDesignShow);

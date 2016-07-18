@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form';
 import counter from './counter';
 import calendar from './calendar-reducer.js';
 import app from './app-reducer.js';
@@ -8,7 +9,8 @@ import app from './app-reducer.js';
 const rootReducer = combineReducers({
   app,
   calendar,
-  counter
+  counter,
+  form
 });
 
 export default rootReducer;

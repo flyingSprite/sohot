@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import * as AppActions from '../../actions/app-actions.js';
 
 // Components
-import Spinner from '../../components/spinner/spinner.js';
+import Spinner from '../../Components/spinner/spinner.js';
 
 class App extends Component {
 

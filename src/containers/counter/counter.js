@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import { Checkbox } from 'material-ui';
 
 import TagColorCard from '../../cards/tag-color-card/tag-color-card.js';
-import Editor from '../../components/editor/editor.js';
+import Editor from '../../Components/editor/editor.js';
 
 import * as CounterAction from '../../actions/counter-actions.js';
 

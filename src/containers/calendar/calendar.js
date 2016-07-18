@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import * as AppActions from '../../actions/calendar-actions.js';
 
 // Components
-import FullCalendar from '../../components/full-calendar/full-calendar.js';
+import FullCalendar from '../../Components/full-calendar/full-calendar.js';
 
 class Calendar extends Component {
 

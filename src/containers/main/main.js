@@ -6,49 +6,100 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import DevTools from '../../devTools/dev-tool.js';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // App actions
 import * as AppActions from '../../actions/app-actions.js';
+
+// Components
+import { ReactHeadroom } from '../../Components/Layouts';
+
+// import Headroom from 'react-headroom';
 
 class Main extends Component {
 
   render() {
     return (
-      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header className="mdl-layout__header">
-          <div className="mdl-layout__header-row">
-            <span className="mdl-layout-title">Sohot</span>
-            <div className="mdl-layout-spacer"></div>
-            <nav className="mdl-navigation mdl-layout--large-screen-only">
-              <Link className="mdl-navigation__link" to="/main/counter">Counter</Link>
-              <Link className="mdl-navigation__link" to="/main/calendar">Calendar</Link>
-            </nav>
-          </div>
-        </header>
-        <div className="mdl-layout__drawer">
-          <span className="mdl-layout-title">Sohot</span>
-          <nav className="mdl-navigation">
-            <a className="mdl-navigation__link" href="">Link</a>
-            <a className="mdl-navigation__link" href="">Link</a>
-            <a className="mdl-navigation__link" href="">Link</a>
-            <a className="mdl-navigation__link" href="">Link</a>
+      <div>
+        <ReactHeadroom>
+          <span>Sohot</span>
+          <div></div>
+          <nav>
+            <Link to="/main/counter">Counter</Link>
+            <Link to="/main/calendar">Calendar</Link>
           </nav>
-        </div>
-          <main className="mdl-layout__content">
-            {this.props.children}
-          <footer className="mdl-mega-footer">
-            <div className="mdl-mega-footer__middle-section">
-              <div className="mdl-mega-footer__drop-down-section">
-                <input className="mdl-mega-footer__heading-checkbox" type="checkbox" />
-                <h1 className="mdl-mega-footer__heading">Features</h1>
-                <ul className="mdl-mega-footer__link-list">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Terms</a></li>
-                  <li><a href="#">Partners</a></li>
-                  <li><a href="#">Updates</a></li>
-                </ul>
-              </div>
-            </div>
-          </footer></main>
+        </ReactHeadroom>
+
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+
+          <div>test </div>
+        <main>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          <div>test .............</div>
+          {this.props.children}
+        </main>
         <DevTools />
       </div>
     );
