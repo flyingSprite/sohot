@@ -9,8 +9,17 @@ Babel 6.x + webpack support react: [click here](http://stackoverflow.com/questio
 
 Basic folder: [https://github.com/kriasoft/react-starter-kit/blob/master/tools/webpack.config.js](https://github.com/kriasoft/react-starter-kit/blob/master/tools/webpack.config.js)
 
+### Reference Web Site
 
-变成规范采用[Airbnb react开发规范](https://github.com/airbnb/javascript/tree/master/react)
+* [https://mara.groupfivesoftware.com/app/index.html](https://mara.groupfivesoftware.com/app/index.html#/)
+* [http://eliteadmin.themedesigner.in/](http://eliteadmin.themedesigner.in/)
+
+### Reference Document
+
+* [React.js](http://reactjs.cn/react/index.html)
+* [Redux](https://docs.reduxframework.com/)
+* [Redux Form](http://redux-form.com/)
+* [Airbnb React开发规范](https://github.com/airbnb/javascript/tree/master/react)
 
 ## Public React Components
 
