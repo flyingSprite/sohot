@@ -1,0 +1,11 @@
+
+.input-field {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+  width: 100%;
+}
+
+.input-field label {
+    left: 0.75rem;
+}

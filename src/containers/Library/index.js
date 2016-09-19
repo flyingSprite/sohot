@@ -1,0 +1,2 @@
+
+export MaterialDesignIconView from './MaterialDesignIconView';

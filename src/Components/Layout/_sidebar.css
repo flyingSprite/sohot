@@ -1,0 +1,145 @@
+.side-nav {
+    position: fixed;
+    width: 240px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 90px);
+    height: -moz-calc(100%);
+    padding-bottom: 90px;
+    background-color: #fff;
+    z-index: 999;
+    backface-visibility: hidden;
+    overflow-y: auto;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateX(-105%);
+}
+
+.side-nav.fixed {
+    left: 0;
+    transform: translateX(0);
+    position: fixed;
+}
+
+.side-nav li {
+    float: none;
+    line-height: 64px;
+}
+
+
+.side-nav .collapsible, .side-nav.fixed .collapsible {
+    border: none;
+    box-shadow: none;
+}
+
+.side-nav .collapsible {
+    margin: 0;
+}
+
+.collapsible {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin: .5rem 0 1rem 0;
+}
+
+.collapsible li {
+    padding: 0;
+    line-height: normal;
+}
+
+.collapsible li.active {
+    background-color: #FFF;
+}
+
+.collapsible li .material-icons-up{
+    float: right;
+    text-align: right;
+    margin-right: 0;
+    display: none;
+}
+
+.collapsible li .material-icons-down{
+    float: right;
+    text-align: right;
+    margin-right: 0;
+    display: block;
+}
+
+.collapsible li.active .material-icons-up {
+    display: block;
+}
+
+.collapsible li.active .material-icons-down {
+    display: none;
+}
+
+.wrapper.vertical-sidebar .side-nav .collapsible .collapsible-header {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.side-nav .collapsible-header, .side-nav.fixed .collapsible-header {
+    background-color: transparent;
+    border: none;
+    line-height: inherit;
+    height: inherit;
+    padding: 0 30px;
+}
+
+.collapsible-header {
+    display: block;
+    cursor: pointer;
+    min-height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    background-color: #ededed;
+    border-bottom: 1px solid #ddd;
+}
+
+.collapsible-body li {
+    background-color: #F2F2F2;
+}
+
+.side-nav.fixed .collapsible-body li.active a {
+    color: #fff;
+}
+.wrapper.vertical-sidebar .side-nav .collapsible a {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.side-nav a {
+    color: #444;
+    display: block;
+    font-size: 1rem;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 30px;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: all .3s ease-out;
+}
+
+

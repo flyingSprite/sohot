@@ -1,0 +1,2 @@
+
+export MaterialDesignIcon from './MaterialDesignIcon';

@@ -2,7 +2,7 @@ import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
 import { Provider } from 'react-redux'
-import App from '../../containers/App'
+import App from '../../Containers/App'
 import configureStore from '../../store/configureStore'
 
 function setup(initialState) {

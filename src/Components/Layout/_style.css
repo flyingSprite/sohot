@@ -1,0 +1,100 @@
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: '100%';
+  background-color: '#11619a';
+  -webkit-transition: 'all .5s ease-in-out';
+  -moz-transition: 'all .5s ease-in-out';
+  -o-transition: 'all .5s ease-in-out';
+  transition: 'all .5s ease-in-out';
+}
+.headroom--unfixed {
+  position: relative;
+  z-index: 9999;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  z-index: 9999;
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  z-index: 9999;
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  z-index: 9999;
+  position: fixed;
+  transform: translateY(0%);
+}
+
+.nav-wrapper a.brand-logo {
+    background-position: center;
+    max-width: 240px;
+    text-align: left;
+    width: 100%;
+    background-color: #b02e67;
+    height: 64px;
+    line-height: 64px;
+    font-size: 32px;
+    color: #fff;
+    background: none;
+    padding-left: 64px;
+}
+
+a.brand-logo {
+    background-color: transparent;
+    line-height: 64px;
+    font-family: 'Grand Hotel',cursive;
+    color: #fff;
+    margin: 0;
+    font-size: 32px;
+    vertical-align: middle;
+    background: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+}
+
+nav .brand-logo {
+    color: #fff;
+    display: inline-block;
+    font-size: 32px;
+    padding: 0;
+    white-space: nowrap;
+}
+
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+nav a {
+    color: #fff;
+}
+
+.section-header {
+    padding: 15px 20px 20px 20px;
+    background-color: #fff;
+}
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    margin: 0px 42px;
+    padding: 15px;
+    display: block;
+}
+
+
+

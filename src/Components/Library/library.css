@@ -1,0 +1,30 @@
+
+
+.icon-library-layout {
+  width: 260px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  float: left;
+  cursor: pointer;
+}
+
+.icon-library-layout:hover {
+  color: #FFF;
+  background-color: #1d9d74;
+}
+
+.icon-library-layout div {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.icon-library-layout div i {
+  line-height: 30px;
+}
+
+.icon-library-layout span {
+  line-height: 30px;
+  padding-left: 10px;
+}

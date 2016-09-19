@@ -1,2 +1,0 @@
-
-export ReactHeadroom from './Headroom';

@@ -21,6 +21,10 @@ Basic folder: [https://github.com/kriasoft/react-starter-kit/blob/master/tools/w
 * [Redux Form](http://redux-form.com/)
 * [Airbnb React开发规范](https://github.com/airbnb/javascript/tree/master/react)
 
+### Regular Design
+
+* 文件夹和文件的命名方式为帕斯卡命名法
+
 ## Public React Components
 
 * React Draggable: [https://github.com/mzabriskie/react-draggable](https://github.com/mzabriskie/react-draggable)

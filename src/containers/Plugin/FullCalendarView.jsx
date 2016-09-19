@@ -3,13 +3,19 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import connectToWrap from '../../Utils/Wrapper';
+
 // App actions
 import * as AppActions from '../../actions/calendar-actions.js';
 
-// Components
-import FullCalendar from '../../Components/full-calendar/full-calendar.js';
+// Plugins
+import {FullCalendar} from '../../Components/Plugin';
 
-class Calendar extends Component {
+// Layouts
+import {MainContent} from '../../Components/Layout';
+
+@connectToWrap('Full Calendar')
+class FullCalendarView extends Component {
 
   render() {
     let events = [
@@ -19,15 +25,16 @@ class Calendar extends Component {
         allDay: true
       }
     ];
+
     return (
-      <div className="mdl-grid">
+      <MainContent>
         <FullCalendar events={events} />
-      </div>
+      </MainContent>
     );
   };
 }
 
-Calendar.propTypes = {
+FullCalendarView.propTypes = {
   appState  : PropTypes.object.isRequired,
   appActions: PropTypes.object.isRequired
 };
@@ -47,4 +54,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Calendar);
+)(FullCalendarView);
