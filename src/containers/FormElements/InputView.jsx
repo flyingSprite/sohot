@@ -12,6 +12,8 @@ import {
   FxInput
 } from '../../Components/FormElements';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 @connectToWrap('Form Elements - Input')
 class InputView extends Component {
@@ -28,6 +30,7 @@ class InputView extends Component {
     ];
     return(
       <MainContent>
+        <RaisedButton label="Default" />
         <FxInput label="First Input" disabled={true} />
         <FxInput label="First Input" />
         <FxInput label="Last Input" placeHolder="Last Input, too."/>

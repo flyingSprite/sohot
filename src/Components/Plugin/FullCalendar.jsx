@@ -16,9 +16,9 @@ class FullCalendar extends Component {
       customButtons: {
         myCustomButton: {
           text: '<span>custom!</span>',
-            click: function() {
-                alert('clicked the custom button!');
-            }
+          click: function() {
+              alert('clicked the custom button!');
+          }
         }
       },
       selectable: true,
