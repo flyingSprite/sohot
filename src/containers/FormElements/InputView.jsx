@@ -28,9 +28,12 @@ class InputView extends Component {
       {value: 'option 2', text: 'Option 2'},
       {value: 'option 3', text: 'Option 3'},
     ];
+    const style = {
+      margin: 12,
+    };
     return(
       <MainContent>
-        <RaisedButton label="Default" />
+          <RaisedButton label="Default" style={style} />
         <FxInput label="First Input" disabled={true} />
         <FxInput label="First Input" />
         <FxInput label="Last Input" placeHolder="Last Input, too."/>

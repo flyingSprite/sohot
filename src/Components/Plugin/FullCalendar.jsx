@@ -9,13 +9,13 @@ class FullCalendar extends Component {
     var $calendar = $(calendar);
     $calendar.fullCalendar({
       header: {
-        left: 'prev,next today myCustomButton',
+        left: 'prev,today,next myCustomButton',
         center: 'title',
         right: 'month,basicWeek,basicDay,agendaWeek,agendaDay'
       },
       customButtons: {
         myCustomButton: {
-          text: '<span>custom!</span>',
+          text: 'custom',
           click: function() {
               alert('clicked the custom button!');
           }

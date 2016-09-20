@@ -10,7 +10,12 @@ import { bindActionCreators } from 'redux';
 import * as AppActions from '../../actions/app-actions.js';
 
 // Components
-import { Header, SideBar } from '../../Components/Layout';
+import { AppBar, Header, SideBar } from '../../Components/Layout';
+
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {cyan100, cyan500, cyan700} from 'material-ui/styles/colors';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // import {MaterialDesignIcon} from '../../Components/Library';
 
@@ -18,6 +23,19 @@ import { Header, SideBar } from '../../Components/Layout';
 
 import APP_MENUS from '../menu';
 
+injectTapEventPlugin();
+
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: cyan500,
+    primary2Color: cyan700,
+    primary3Color: cyan100,
+  },
+}, {
+  avatar: {
+    borderColor: null,
+  }
+});
 
 class Main extends Component {
 
@@ -48,12 +66,15 @@ class Main extends Component {
   render() {
     const {location} = this.props;
     return (
-      <div className="wrapper vertical-sidebar cyan-scheme">
-        <Header />
-        {/*<SideBar menus={APP_MENUS} menuLink={location.pathname} selectSubMenu={::this.selectSubMenu}/>*/}
-        <SideBar menus={APP_MENUS} menuLink={location.pathname} />
-        {this.props.children}
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div className="wrapper vertical-sidebar cyan-scheme">
+          <AppBar title="Sohot"/>
+          <Header />
+          {/*<SideBar menus={APP_MENUS} menuLink={location.pathname} selectSubMenu={::this.selectSubMenu}/>*/}
+          <SideBar menus={APP_MENUS} menuLink={location.pathname} />
+          {this.props.children}
+        </div>
+      </MuiThemeProvider>
     );
   };
 }
