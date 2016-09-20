@@ -10,7 +10,7 @@ import { bindActionCreators } from 'redux';
 import * as AppActions from '../../actions/app-actions.js';
 
 // Components
-import { AppBar, Header, SideBar } from '../../Components/Layout';
+import { AppBar, SideBar } from '../../Components/Layout';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -69,8 +69,6 @@ class Main extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="wrapper vertical-sidebar cyan-scheme">
           <AppBar title="Sohot"/>
-          <Header />
-          {/*<SideBar menus={APP_MENUS} menuLink={location.pathname} selectSubMenu={::this.selectSubMenu}/>*/}
           <SideBar menus={APP_MENUS} menuLink={location.pathname} />
           {this.props.children}
         </div>

@@ -25,7 +25,7 @@ ul li {
 }
 
 .wrapper.vertical-sidebar .side-nav {
-    top: 64px;
+    padding-top: 64px;
 }
 
 .wrapper.vertical-sidebar .side-nav .collapsible .collapsible-body li.active {
@@ -37,12 +37,11 @@ ul li {
 }
 
 .wrapper .main {
-    padding-top: 64px;
     min-height: calc(100vh - 64px);
     padding-bottom: 370px;
     margin-bottom: -370px;
 }
 
 .main {
-    padding-left: 240px;
+    padding-left: 300px;
 }

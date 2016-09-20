@@ -12,10 +12,7 @@ class AppBar extends Component {
     // const githubLink = 'https://github.com/flyingSprite/sohot';
     return (
       <MaterialUiAppBar
-        title={<span>{title}</span>}
-        iconElementRight={
-          <i className="material-icons">github</i>
-        }
+        title={title}
       />
     );
   }

@@ -1,9 +1,5 @@
 import './_formElement.css';
 
-import 'jquery';
-import 'materialize-css/dist/js/materialize.min';
-import 'materialize-css/dist/css/materialize.min.css';
-
 /**
  * Form Element Package.
  * Basic jQuery + Materialize design.
