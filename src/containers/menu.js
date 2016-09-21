@@ -34,6 +34,16 @@ const APP_MENUS = [
         link: '/library/material-design-icon',
       }
     ]
+  }, {
+    title: 'Redux Form',
+    icon: 'straighten',
+    link: '/redux-form',
+    subMenus: [
+      {
+        title: 'Simple Form',
+        link: '/redux-form/simple',
+      }
+    ]
   }
 ];
 

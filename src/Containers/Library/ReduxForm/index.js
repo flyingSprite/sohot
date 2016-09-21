@@ -1,0 +1,2 @@
+
+export SimpleFormView from './SimpleFormView';

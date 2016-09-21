@@ -11,6 +11,10 @@ import {
 } from '../Containers/Library';
 
 import {
+  SimpleFormView
+} from '../Containers/Library/ReduxForm';
+
+import {
   FullCalendarView
 } from '../Containers/Plugin';
 
@@ -32,6 +36,9 @@ const appRoutes = () => (
       </Route>
       <Route path="form-elements">
         <Route path="input" component={InputView} />
+      </Route>
+      <Route path="redux-form">
+        <Route path="simple" component={SimpleFormView} />
       </Route>
     </Route>
   </Router>
