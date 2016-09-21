@@ -1,5 +1,5 @@
 
-import './_style.scss';
+import './style.scss';
 
 export AppBar from './AppBar';
 export MenuHeader from './MenuHeader';
