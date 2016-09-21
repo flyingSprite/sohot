@@ -4,14 +4,9 @@ import React, {Component} from 'react';
 import connectToWrap from '../../Utils/Wrapper';
 
 // Layouts
-import {MainContent} from '../../Components/Layout';
+import {Card} from 'material-ui/Card';
 
 // Form Elements
-import {
-  Dropdown,
-  FxInput
-} from '../../Components/FormElements';
-
 import RaisedButton from 'material-ui/RaisedButton';
 
 
@@ -23,22 +18,18 @@ class InputView extends Component {
   }
 
   render() {
-    const dropdownOptions = [
-      {value: 'option 1', text: 'Option 1'},
-      {value: 'option 2', text: 'Option 2'},
-      {value: 'option 3', text: 'Option 3'},
-    ];
+    // const dropdownOptions = [
+    //   {value: 'option 1', text: 'Option 1'},
+    //   {value: 'option 2', text: 'Option 2'},
+    //   {value: 'option 3', text: 'Option 3'},
+    // ];
     const style = {
       margin: 12,
     };
     return(
-      <MainContent>
-          <RaisedButton label="Default" style={style} />
-        <FxInput label="First Input" disabled={true} />
-        <FxInput label="First Input" />
-        <FxInput label="Last Input" placeHolder="Last Input, too."/>
-        <Dropdown options={dropdownOptions}/>
-      </MainContent>
+      <Card>
+        <RaisedButton label="Default" style={style} />
+      </Card>
     );
   }
 }

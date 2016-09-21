@@ -10,7 +10,9 @@ export default function connectToWrap(name) {
         return (
           <div className="main">
             <SectionHeader title={name ? name : ''} />
-            <WrappedComponent />
+            <div className="main-context">
+              <WrappedComponent />
+            </div>
           </div>
         );
       }

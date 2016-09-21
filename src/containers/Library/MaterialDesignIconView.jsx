@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import connectToWrap from '../../Utils/Wrapper';
-import {MainContent} from '../../Components/Layout';
+import {Card} from 'material-ui/Card';
 import {MaterialDesignIcon} from '../../Components/Library';
 
 
@@ -10,9 +10,9 @@ class MaterialDesignIconView extends Component {
 
   render() {
     return (
-      <MainContent>
+      <Card>
         <MaterialDesignIcon />
-      </MainContent>
+      </Card>
     );
   }
 }

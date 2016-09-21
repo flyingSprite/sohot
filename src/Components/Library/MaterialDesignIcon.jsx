@@ -941,7 +941,7 @@ class MaterialDesignIcon extends Component {
 
   render() {
     return (
-      <div>
+      <div className="inner-context">
         {ICONS.map((icon, index) => {
           return (
             <div className="icon-library-layout" key={index}>

@@ -5,9 +5,6 @@ import { Router, Route, browserHistory  } from 'react-router';
 
 // import App from '../containers/app/app.js';
 import Main from '../Containers/main/main.js';
-import FieldDesignShow from '../Containers/field-design/show.js';
-import Counter from '../Containers/counter/counter.js';
-import Components from '../Containers/Components/Components.js';
 
 import {
   MaterialDesignIconView
@@ -27,9 +24,6 @@ import {
 const appRoutes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Main}>
-      <Route path="counter" component={Counter} />
-      <Route path="components" component={Components} />
-      <Route path="show" component={FieldDesignShow} />
       <Route path="library">
         <Route path="material-design-icon" component={MaterialDesignIconView} />
       </Route>

@@ -1,7 +1,5 @@
 // Styles - Public
-import 'Roboto-fontface';
-import 'material-design-lite/dist/material.min.css';
-import 'material-design-lite/dist/material.min.js';
+import 'roboto-fontface';
 import 'material-design-icons';
 
 import './src/asserts/index.css';

@@ -1,11 +1,14 @@
-import './_color.css';
-import './_style.css';
+import './style.scss';
 
 import React, { Component, PropTypes } from 'react';
 
 import 'material-design-icons';
 
 class TagColor extends Component {
+
+  static propTypes = {
+    onSelect: PropTypes.func.isRequired
+  };
 
   constructor() {
     super();
@@ -21,7 +24,6 @@ class TagColor extends Component {
   _onSelectTagColor(e) {
     let tag = e.target.getAttribute('data-tag');
     this.setState({color: tag});
-
     const { onSelect } = this.props;
     onSelect(tag);
   }
@@ -54,9 +56,5 @@ class TagColor extends Component {
     );
   }
 }
-
-TagColor.propTypes = {
-  onSelect: PropTypes.func.isRequired
-};
 
 export default TagColor;

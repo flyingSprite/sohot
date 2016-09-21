@@ -66,7 +66,7 @@ class FullCalendar extends Component {
 
   render() {
     return (
-      <div ref="calendar" />
+      <div ref="calendar" className="inner-context" />
     );
   }
 }

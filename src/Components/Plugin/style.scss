@@ -1,12 +1,12 @@
 .event-tag {
-    margin-top: 20px;
-}
+  margin-top: 20px;
 
-.event-tag span {
+  span {
     padding: 11px 14px 0;
     margin-right: 5px;
     border-radius: 15px;
     cursor: pointer;
+  }
 }
 
 .icon-layout {
@@ -14,8 +14,7 @@
   margin: -8px 0 0 -12px;
   color: #fff;
 
-}
-
-.icon-layout__display {
-	display: none;
+  ${#}__display {
+  display: none;
+  }
 }

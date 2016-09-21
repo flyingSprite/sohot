@@ -12,7 +12,7 @@ import * as AppActions from '../../actions/calendar-actions.js';
 import {FullCalendar} from '../../Components/Plugin';
 
 // Layouts
-import {MainContent} from '../../Components/Layout';
+import {Card} from 'material-ui/Card';
 
 @connectToWrap('Full Calendar')
 class FullCalendarView extends Component {
@@ -27,9 +27,9 @@ class FullCalendarView extends Component {
     ];
 
     return (
-      <MainContent>
+      <Card>
         <FullCalendar events={events} />
-      </MainContent>
+      </Card>
     );
   };
 }

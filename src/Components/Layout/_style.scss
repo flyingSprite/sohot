@@ -12,10 +12,7 @@
     padding-bottom: 90px;
     background-color: #fff;
     z-index: 999;
-    backface-visibility: hidden;
     overflow-y: auto;
-    will-change: transform;
-    backface-visibility: hidden;
     transform: translateX(-105%);
 }
 
@@ -55,8 +52,8 @@
   height: initial !important;
   line-height: initial !important;
   text-decoration: none;
-}
 
-.menu-link:hover {
-  background-color: initial !important;
+  &:hover {
+    background-color: initial !important;
+  }
 }

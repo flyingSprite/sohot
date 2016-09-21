@@ -45,3 +45,12 @@ ul li {
 .main {
     padding-left: 300px;
 }
+
+.main-context {
+  padding: 0px 15px;
+}
+
+.inner-context {
+  display: inline-block;
+  margin: 15px;
+}

@@ -64,6 +64,10 @@ var config = {
                 loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
             },
             {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
+            },
+            {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 loader: 'url-loader?limit=8192'
             },
