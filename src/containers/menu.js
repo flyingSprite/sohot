@@ -42,6 +42,12 @@ const APP_MENUS = [
       {
         title: 'Simple Form',
         link: '/redux-form/simple',
+      }, {
+        title: 'Sync Validation Form',
+        link: '/redux-form/syncValidation',
+      }, {
+        title: 'Async Validation Form',
+        link: '/redux-form/asyncValidation',
       }
     ]
   }

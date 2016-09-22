@@ -2,18 +2,14 @@
 import React, {Component, PropTypes} from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-import {
-  TextField
-} from 'redux-form-material-ui';
+import { RadioButton } from 'material-ui/RadioButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
-// const renderTextField = ({ label, input, meta: { touched, error }, ...costom}) => (
-//   <TextField hintText={label}
-//     floatingLabelText={label}
-//     errorText={touched && error}
-//     {...input}
-//     {...}
-//   />
-// );
+import {
+  RenderRadioGroup,
+  RenderTextField
+} from './RenderMaterialUI';
+
 
 class SimpleForm extends Component {
   static propTypes = {
@@ -25,15 +21,24 @@ class SimpleForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div>
-          <Field name="firstName" component={TextField} label="First Name" />
+          <Field name="firstName" component={RenderTextField} label="First Name" />
         </div>
         <div>
-          <Field name="lastName" component={TextField} label="Last Name" />
+          <Field name="lastName" component={RenderTextField} label="Last Name" />
         </div>
         <div>
-          <Field name="email"  component={TextField} label="Email" type="email"/>
+          <Field name="email"  component={RenderTextField} label="Email" type="email"/>
         </div>
-        <button type="submit">Submit</button>
+        <div>
+          <Field name="sex" component={RenderRadioGroup}>
+            <RadioButton value="male" label="male"/>
+            <RadioButton value="female" label="female"/>
+          </Field>
+        </div>
+        <div>
+          <RaisedButton label="Cancel" style={{margin: 12}} />
+          <RaisedButton type="submit" label="Submit" primary={true} style={{margin: 12}} />
+        </div>
       </form>
     );
   }

@@ -11,7 +11,9 @@ import {
 } from '../Containers/Library';
 
 import {
-  SimpleFormView
+  AsyncValidationView,
+  SimpleFormView,
+  SyncValidationView
 } from '../Containers/Library/ReduxForm';
 
 import {
@@ -39,6 +41,8 @@ const appRoutes = () => (
       </Route>
       <Route path="redux-form">
         <Route path="simple" component={SimpleFormView} />
+        <Route path="syncValidation" component={SyncValidationView} />
+        <Route path="asyncValidation" component={AsyncValidationView} />
       </Route>
     </Route>
   </Router>
