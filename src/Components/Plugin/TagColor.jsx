@@ -30,15 +30,15 @@ class TagColor extends Component {
 
   render() {
     let colors = [
-        'bgm-teal',
-        'bgm-red',
-        'bgm-pink',
-        'bgm-blue',
-        'bgm-lime',
-        'bgm-green',
-        'bgm-cyan',
-        'bgm-orange',
-        'bgm-purple'
+      'bgm-teal',
+      'bgm-red',
+      'bgm-pink',
+      'bgm-blue',
+      'bgm-lime',
+      'bgm-green',
+      'bgm-cyan',
+      'bgm-orange',
+      'bgm-purple'
     ];
 
     let showClassName = 'material-icons icon-layout';

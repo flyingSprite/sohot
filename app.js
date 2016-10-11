@@ -1,6 +1,4 @@
 // Styles - Public
-import 'roboto-fontface';
-import 'material-design-icons';
 
 import './src/asserts/index.css';
 
@@ -22,4 +20,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-

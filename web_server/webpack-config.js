@@ -8,7 +8,7 @@ var Webpack = require('webpack'),
 var eslintrcPath = path.resolve(__dirname, '../.eslintrc'),
     nodeModulesPath = path.resolve(__dirname, '../node_modules'),
     buildPath = path.resolve(__dirname, '../build'),
-    mainPath = path.resolve(__dirname, '../app.js');
+    mainPath = path.resolve(__dirname, '../src/app.js');
 
 // Raise tread pool size to prevent bundling stuck issue
 process.env.UV_THREADPOOL_SIZE = 100;
