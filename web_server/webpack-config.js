@@ -1,12 +1,12 @@
 var Webpack = require('webpack'),
-    path = require('path'),
-    autoprefixer = require('autoprefixer'),
-    precss = require('precss'),
-    pkg = require('./../package.json');
+    path = require('path');
+    // autoprefixer = require('autoprefixer'),
+    // precss = require('precss');
+    // pkg = require('./../package.json');
 
 
-var eslintrcPath = path.resolve(__dirname, '../.eslintrc'),
-    nodeModulesPath = path.resolve(__dirname, '../node_modules'),
+// var eslintrcPath = path.resolve(__dirname, '../.eslintrc'),
+var nodeModulesPath = path.resolve(__dirname, '../node_modules'),
     buildPath = path.resolve(__dirname, '../build'),
     mainPath = path.resolve(__dirname, '../app.js');
 
@@ -30,13 +30,13 @@ var config = {
     },
     module: {
         noParse: [/autoit\.js$/],
-        preLoaders: [
-            {
-                test: /\.js(x)?$/,
-                loader: 'eslint',
-                exclude: nodeModulesPath
-            }
-        ],
+        // preLoaders: [
+        //     {
+        //         test: /\.js(x)?$/,
+        //         loader: 'eslint',
+        //         exclude: nodeModulesPath
+        //     }
+        // ],
         loaders: [
             {
                 test: /\.js$/,
@@ -82,13 +82,7 @@ var config = {
         new Webpack.NoErrorsPlugin()
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.css', '.scss']
-    },
-    eslint: {
-        configFile: eslintrcPath
-    },
-    postcss: function () {
-        return [autoprefixer, precss];
+        extensions: ['.js', '.jsx', '.css', '.scss']
     }
 };
 
