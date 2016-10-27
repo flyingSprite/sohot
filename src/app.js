@@ -2,7 +2,7 @@
 import 'roboto-fontface';
 import 'material-design-icons';
 
-import './src/asserts/index.css';
+import './asserts/index.css';
 
 
 // Libraries
@@ -10,9 +10,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // Store
-import configureStore from './src/store/configureStore';
+import configureStore from './store/configureStore';
 // Routes
-import appRoutes from './src/routes/appRoutes';
+import appRoutes from './routes/appRoutes';
 
 const store = configureStore();
 

@@ -7,14 +7,13 @@ const CleanPlugin = require('clean-webpack-plugin');
 const nodeEnv = process.env.NODE_ENV || 'development';
 // const isProd = nodeEnv === 'production';
 
-// const autoprefixer = require('autoprefixer');
-// const precss       = require('precss');
-
+// Get more configuration information
+// To see http://webpack.github.io/docs/configuration.html
 module.exports = {
   // devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
   context: path.join(__dirname, 'src'),
   entry: {
-    js: ['../app'],
+    js: ['./app'],
     vendor: [
       'react', 'react-dom'
     ]
@@ -57,7 +56,7 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: 'node_modules',
+        include: [path.resolve(__dirname, 'src')],
         loaders: [
           {
             loader: 'babel',
@@ -81,7 +80,7 @@ module.exports = {
   resolve: {
     extensions: [ '.js', '.jsx'],
     modules: [
-      path.resolve('/'),
+      path.resolve('/src'),
       'node_modules'
     ]
   },
@@ -105,5 +104,5 @@ module.exports = {
         Promise: 'es6-promise-promise', // works as expected
     })
   ],
-  devtool: false
+  devtool: 'source-map    '
 };
