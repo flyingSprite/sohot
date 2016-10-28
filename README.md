@@ -30,9 +30,12 @@ Basic folder: [https://github.com/kriasoft/react-starter-kit/blob/master/tools/w
 * React Draggable: [https://github.com/mzabriskie/react-draggable](https://github.com/mzabriskie/react-draggable)
 * React Select: [https://github.com/react-component/select](https://github.com/react-component/select)
 
+### webpack
+
+* Get more `Webpack` configuration information, to see [webpack configuration docs](http://webpack.github.io/docs/configuration.html)
+* Get more `webpack-dev-server` configuration information, to see [webpack-dev-server docs](http://webpack.github.io/docs/webpack-dev-server.html)
 
 ## Issue statistics ##
 
 ###  ###
 Reference to [here](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md#as-for-exceptions).
-
