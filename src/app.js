@@ -12,13 +12,16 @@ import { Provider } from 'react-redux';
 // Store
 import configureStore from './store/configureStore';
 // Routes
-import appRoutes from './routes/appRoutes';
+// import appRoutes from './routes/appRoutes';
+
+import RootRouter from './routes';
 
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-      {appRoutes(store)}
+      {/* appRoutes(store) */}
+      <RootRouter />
   </Provider>,
   document.getElementById('root')
 );
