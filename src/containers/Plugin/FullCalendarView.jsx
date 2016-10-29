@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import connectToWrap from '../../Utils/Wrapper';
 
 // App actions
 import * as AppActions from '../../actions/calendar-actions.js';
@@ -14,7 +13,6 @@ import {FullCalendar} from '../../Components/Plugin';
 // Layouts
 import {Card} from 'material-ui/Card';
 
-@connectToWrap('Full Calendar')
 class FullCalendarView extends Component {
 
   render() {
