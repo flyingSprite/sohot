@@ -1,11 +1,13 @@
 // React & Redux
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+
+import reduxManager from '../../helpers/reduxManager';
 
 
 // App actions
-import * as AppActions from '../../actions/calendar-actions.js';
+// import * as AppActions from '../../actions/calendar-actions.js';
 
 // Plugins
 import {FullCalendar} from '../../Components/Plugin';
@@ -14,6 +16,8 @@ import {FullCalendar} from '../../Components/Plugin';
 import {Card} from 'material-ui/Card';
 
 class FullCalendarView extends Component {
+
+  static defaultTitle = 'Full Calendar';
 
   render() {
     let events = [
@@ -37,19 +41,4 @@ FullCalendarView.propTypes = {
   appActions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    appState: state.calendar.toJS()
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    appActions : bindActionCreators(AppActions, dispatch)
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FullCalendarView);
+export default reduxManager(FullCalendarView);

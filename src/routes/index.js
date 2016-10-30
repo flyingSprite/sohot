@@ -48,7 +48,6 @@ export default class extends Component {
             <AppBar title="Sohot"/>
             <SideBar menus={APP_MENUS} menuLink={location.pathname} />
 
-            <Match key="Dashboard" pattern="/" component={InputView} />
             <Match key="library-material-design-icon" pattern="/library/material-design-icon" component={MaterialDesignIconView} />
             <Match key="plugin-full-calendar" pattern="/plugin/full-calendar" component={FullCalendarView} />
             <Match key="form-elements-input" pattern="/form-elements/input" component={InputView} />

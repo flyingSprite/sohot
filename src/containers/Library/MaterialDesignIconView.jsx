@@ -1,15 +1,16 @@
 
 import React, { Component } from 'react';
-import connectToWrap from '../../Utils/Wrapper';
 import {Card} from 'material-ui/Card';
 import {MaterialDesignIcon} from '../../Components/Library';
 
+import reduxManager from '../../helpers/reduxManager';
 
-@connectToWrap('Material Design Icon')
+
 class MaterialDesignIconView extends Component {
 
+  static defaultTitle = 'Material Design Icon';
+
   render() {
-    console.log('=++++++++');
     return (
       <Card>
         <MaterialDesignIcon />
@@ -18,4 +19,4 @@ class MaterialDesignIconView extends Component {
   }
 }
 
-export default MaterialDesignIconView;
+export default reduxManager(MaterialDesignIconView);

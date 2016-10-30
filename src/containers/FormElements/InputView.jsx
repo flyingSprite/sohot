@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 
-import connectToWrap from '../../Utils/Wrapper';
+import reduxManager from '../../helpers/reduxManager';
 
 // Layouts
 import {Card} from 'material-ui/Card';
@@ -10,19 +10,16 @@ import {Card} from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 
 
-@connectToWrap('Form Elements - Input')
 class InputView extends Component {
+
 
   constructor() {
     super();
   }
 
+  static defaultTitle = 'Form Elements - Input';
+
   render() {
-    // const dropdownOptions = [
-    //   {value: 'option 1', text: 'Option 1'},
-    //   {value: 'option 2', text: 'Option 2'},
-    //   {value: 'option 3', text: 'Option 3'},
-    // ];
     const style = {
       margin: 12,
     };
@@ -34,4 +31,4 @@ class InputView extends Component {
   }
 }
 
-export default InputView;
+export default reduxManager(InputView);

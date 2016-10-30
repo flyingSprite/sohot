@@ -1,10 +1,12 @@
 // React & Redux
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+//
+// // App actions
+// import * as AppActions from '../../actions/calendar-actions.js';
 
-// App actions
-import * as AppActions from '../../actions/calendar-actions.js';
+import reduxManager from '../../helpers/reduxManager';
 
 import { FxInput, FloatingInput, SearchInput } from '../../Components/FormElements';
 
@@ -32,19 +34,21 @@ Components.propTypes = {
   appActions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    appState: state.calendar.toJS()
-  };
-}
+return reduxManager(Components);
 
-function mapDispatchToProps(dispatch) {
-  return {
-    appActions : bindActionCreators(AppActions, dispatch)
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Components);
+// function mapStateToProps(state) {
+//   return {
+//     appState: state.calendar.toJS()
+//   };
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     appActions : bindActionCreators(AppActions, dispatch)
+//   };
+// }
+//
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Components);
