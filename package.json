@@ -30,7 +30,7 @@
   "homepage": "https://github.com/flyingSprite/sohot#readme",
   "dependencies": {
     "classnames": "^2.2.3",
-    "fullcalendar": "^2.6.1",
+    "fullcalendar": "^3.0.1",
     "history": "^2.0.2",
     "immutable": "^3.8.0",
     "inflight": "^1.0.4",

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import 'fullcalendar/dist/fullcalendar.min.css';
-import 'fullcalendar/dist/fullcalendar.min.js';
 import $ from 'jquery';
+import 'fullcalendar/dist/fullcalendar.min.css';
+import 'fullcalendar/dist/fullcalendar.min';
 
 class FullCalendar extends Component {
   componentDidMount() {

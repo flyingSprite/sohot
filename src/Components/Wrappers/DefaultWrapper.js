@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 
-import {SectionHeader} from '../Components/Layout';
+import {SectionHeader} from '../Layout';
 
 const DefaultWrapper = (name) => (WrapperedComponent) => {
   return class extends Component {
