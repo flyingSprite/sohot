@@ -16,7 +16,7 @@ let ListItemWrapper = listItemWrapper(ListItem);
 class MenuHeader extends Component {
 
   static propTypes = {
-    menus: PropTypes.array.isRequired,
+    menus: PropTypes.object.isRequired,
     menuLink: PropTypes.string.isRequired
     // history: PropTypes.object
   };
@@ -29,10 +29,10 @@ class MenuHeader extends Component {
 
   render() {
     const {menus, menuLink} = this.props;
+    const menusJS = menus.toJS();
     return (
       <SelectableList defaultValue={menuLink} >
-        {/*<Subheader>Nested List Items</Subheader>*/}
-        {menus.map((menu, index) => {
+        {menusJS.map((menu, index) => {
           return (
             <ListItemWrapper
               key={index}
@@ -42,52 +42,24 @@ class MenuHeader extends Component {
               leftIcon={<i className="material-icons">{menu.icon}</i>}
               selectedStyle={{color: '#00abc0', backgroundColor: '#FFF'}}
               nestedItems={do {
-                if (menu.subMenus) {
-                  menu.subMenus.map((subMenu, subIndex) => {
-                    return (
-                      <ListItemWrapper
-                        selectedStyle={{color: '#FFF', backgroundColor: '#00abc0'}}
-                        style={{backgroundColor: '#F2F2F2'}}
-                        key={subIndex}
-                        // onClick={::this.linkTo.bind(this, subMenu.link)}
-                        value={subMenu.link}
-                        primaryText={<Link className="menu-link" to={subMenu.link}>{subMenu.title}</Link>}
-                      />
-                    );
-                  });
-                } else {
-                  [];
-                }
+                menu.subMenus
+                ? menu.subMenus.map((subMenu, subIndex) => {
+                  return (
+                    <ListItemWrapper
+                      selectedStyle={{color: '#FFF', backgroundColor: '#00abc0'}}
+                      style={{backgroundColor: '#F2F2F2'}}
+                      key={subIndex}
+                      // onClick={::this.linkTo.bind(this, subMenu.link)}
+                      value={subMenu.link}
+                      primaryText={<Link className="menu-link" to={subMenu.link}>{subMenu.title}</Link>}
+                    />
+                  );
+                })
+                : [];
               }}
             />
           );
         })}
-        {/*<ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
-        <ListItem primaryText="Drafts" leftIcon={<ContentDrafts />} />
-        <ListItem
-          primaryText="Inbox"
-          leftIcon={<ContentInbox />}
-          initiallyOpen={true}
-          primaryTogglesNestedList={true}
-          nestedItems={[
-            <ListItem
-              key={1}
-              primaryText="Starred"
-              leftIcon={<ActionGrade />}
-            />,
-            <ListItem
-              key={2}
-              primaryText="Sent Mail"
-              leftIcon={<ContentSend />}
-            />,
-            <ListItem
-              key={3}
-              primaryText="Inbox"
-              leftIcon={<ContentInbox />}
-              onNestedListToggle={this.handleNestedListToggle}
-            />,
-          ]}
-        />*/}
       </SelectableList>
     );
   }

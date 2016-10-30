@@ -15,9 +15,6 @@ export const makeSelectable = (ListItemComponent) => {
     };
 
     extendChild(child, styles, selectedItemStyle) {
-      if (child && child.type) {
-        console.log(child.type.muiName);
-      }
       if (child && child.type && child.type.muiName === 'ListItem') {
         const selected = this.isChildSelected(child, this.props);
         let selectedChildrenStyles;

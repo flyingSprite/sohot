@@ -4,7 +4,7 @@ import MenuHeader from './MenuHeader';
 class SideBar extends Component {
 
   static propTypes = {
-    menus: PropTypes.array.isRequired,
+    menus: PropTypes.object.isRequired,
     menuLink: PropTypes.string.isRequired
   }
 
@@ -23,4 +23,3 @@ class SideBar extends Component {
 }
 
 export default SideBar;
-

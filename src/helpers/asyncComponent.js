@@ -20,15 +20,9 @@ export default function asyncComponent(getComponent) {
     componentWillMount() {
       if (!this.state.defaultComponent) {
         getComponent().then(defaultComponent => {
-          console.log(defaultComponent);
           this.setState({ defaultComponent });
         });
       }
-    }
-
-    componentDidMount() {
-      const { defCom } = this.refs;
-      console.log('ref', defCom);
     }
 
     render() {
