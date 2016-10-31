@@ -2,7 +2,7 @@
 import 'roboto-fontface';
 import 'material-design-icons';
 
-import './asserts/index.css';
+import 'asserts/index.css';
 
 
 // Libraries

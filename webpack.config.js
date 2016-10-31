@@ -13,7 +13,7 @@ module.exports = {
   // devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
   context: path.join(__dirname, 'src'),
   entry: {
-    js: ['babel-polyfill', './app'],
+    js: ['babel-polyfill', 'app'],
     vendor: [
       'react', 'react-dom'
     ]
@@ -80,7 +80,7 @@ module.exports = {
   resolve: {
     extensions: [ '.js', '.jsx'],
     modules: [
-      path.resolve('/src'),
+      path.resolve('./src'),
       'node_modules'
     ]
   },
@@ -104,5 +104,5 @@ module.exports = {
         Promise: 'es6-promise-promise', // works as expected
     })
   ],
-  devtool: 'source-map    '
+  devtool: 'source-map'
 };

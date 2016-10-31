@@ -2,10 +2,10 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import DefaultWrapper from '../Components/Wrappers/DefaultWrapper';
+import DefaultWrapper from 'Components/Wrappers/DefaultWrapper';
 
 // App actions
-import * as AppActions from '../actions/calendar-actions.js';
+import * as AppActions from 'actions/calendar-actions.js';
 
 const reduxManager = (innerElement) => {
 
