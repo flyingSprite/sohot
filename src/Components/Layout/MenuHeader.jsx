@@ -13,19 +13,14 @@ let ListItemWrapper = listItemWrapper(ListItem);
 
 // const history = createHistory();
 
+const nestedListStyle = { paddingTop: 0, paddingBottom: 0 };
+
 class MenuHeader extends Component {
 
   static propTypes = {
     menus: PropTypes.object.isRequired,
     menuLink: PropTypes.string.isRequired
-    // history: PropTypes.object
   };
-
-  // linkTo(link) {
-  //   if (link) {
-  //     history.push({pathname: link});
-  //   }
-  // }
 
   render() {
     const {menus, menuLink} = this.props;
@@ -41,6 +36,7 @@ class MenuHeader extends Component {
               initiallyOpen={menu.link && menuLink.startsWith(menu.link)}
               leftIcon={<i className="material-icons">{menu.icon}</i>}
               selectedStyle={{color: '#00abc0', backgroundColor: '#FFF'}}
+              nestedListStyle={ nestedListStyle }
               nestedItems={do {
                 menu.subMenus
                 ? menu.subMenus.map((subMenu, subIndex) => {

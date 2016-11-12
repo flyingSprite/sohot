@@ -24,6 +24,7 @@ function wrapState(ComposedComponent) {
       const {selectedItemStyle} = this.props;
       return (
         <ComposedComponent
+          nestedListStyle={{ paddingTop: 0, paddingBottom: 0 }}
           value={this.state.selectedIndex}
           onChange={this.handleRequestChange}
           selectedItemStyle={selectedItemStyle}

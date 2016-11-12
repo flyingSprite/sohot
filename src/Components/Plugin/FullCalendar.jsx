@@ -49,17 +49,17 @@ class FullCalendar extends Component {
                     end: '2016-04-13T12:30:00'
                 }
       ],
-      eventRender: function(event, element) {
-        console.log('=======');
-        console.log(event);
-        console.log(element);
-      },
-      dayClick: (moment) => {
-        console.log(moment.format('YYYY-MM-DD, h:mm:ss a'));
-
-        // Next month
-        // $calendar.fullCalendar('next');
-      }
+      // eventRender: function(event, element) {
+      //   console.log('=======');
+      //   console.log(event);
+      //   console.log(element);
+      // },
+      // dayClick: (moment) => {
+      //   console.log(moment.format('YYYY-MM-DD, h:mm:ss a'));
+      //
+      //   // Next month
+      //   // $calendar.fullCalendar('next');
+      // }
     });
 
   }

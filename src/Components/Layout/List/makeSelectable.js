@@ -27,7 +27,8 @@ export const makeSelectable = (ListItemComponent) => {
         }
 
         const mergedChildrenStyles = Object.assign({}, child.props.style, selectedChildrenStyles);
-
+        mergedChildrenStyles.paddingTop = 0;
+        mergedChildrenStyles.paddingBottom = 0;
         this.keyIndex += 1;
 
         return React.cloneElement(child, {
@@ -89,7 +90,7 @@ export const makeSelectable = (ListItemComponent) => {
       }
 
       return (
-        <ListItemComponent {...other} {...this.state}>
+        <ListItemComponent style={{paddingTop: 0, paddingBottom: 0}} {...other} {...this.state}>
           {React.Children.map(children, (child) => (
             this.extendChild(child, styles, selectedItemStyle))
           )}
