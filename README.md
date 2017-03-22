@@ -1,3 +1,6 @@
+由于准备升级react到v15，react-router到v4，带来很大的内容修改，所以准备将sohot项目弃用。
+重新创建新的项目学习开发React。
+
 # sohot
 
 使用React开发项目，基于[Material Design Lite]()页面设计，开发出应用项目。
